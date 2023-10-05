@@ -1,8 +1,7 @@
 <?php
-$myFile = fopen("newfile.txt","w")  
-            or die("unable to open file");
-$tekst = "John Juz tu nie mieszkam";
-fwrite( $myFile, $tekst ),
-fclose( $myFile);
+    $cookie_name = "user";
+    $cookie_value = "John Doe";
+    setcookie($cookie_name, $cookie_value,
+              time() + (24*60*60)   );
 ?>
    
