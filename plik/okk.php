@@ -1,26 +1,10 @@
 <?php
-    $_COOKIE_name="promocja";
-    $_COOKIE_value="wycieczka";
-    setcookie($_COOKIE_name,$_COOKIE_value,
-    time()+(40*60*60));
-
-$cookie_name = "promocja";
-
-
-if(!isset($_COOKIE[$cookie_name])){
-    echo "Cookie named '".$cookie_name ."' is not set!";
-} else {
-    echo "Coookie: '".$cookie_name."' is set! <br>";
-    echo "Value is: ".$_COOKIE[$cookie_name];
-};
-
-
-
-setcookie($_COOKIE_name,$_COOKIE_value,
-time()-(7200));
-
-
-
-
+$wzorzec = '/byc/'
+$tekst = "byc albo nie byc";
+if( preg_match( $wzorzec, $tekst ) )
+    echo "znalezioni wzorzec";
+else
+    echo "nie znaleziono wzorca"
+echo "znaleziono: " . preg_match_all( $wzorzec, $tekst );
 ?>
 
